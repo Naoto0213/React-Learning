@@ -1,24 +1,15 @@
-import { makeStyles } from "@material-ui/core";
+import { useSelector } from "react-redux";
 import "./App.css";
-import { SimpleButton } from "./components/SimpleButton";
-
-const useStyle = makeStyles((theme) => {
-  return {
-    title: {
-      fontWeight: "bold",
-    },
-  };
-});
+import Router from "./router/Router";
 
 function App() {
-  const classes = useStyle();
+  const selector = useSelector((state) => state);
+  console.log(selector.users);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className={classes.title}>Reactを学びましょう</p>
-        <SimpleButton>start</SimpleButton>
-      </header>
-    </div>
+    <main className="App">
+      <Router />
+    </main>
   );
 }
 

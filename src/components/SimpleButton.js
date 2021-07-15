@@ -11,11 +11,16 @@ const useStyle = makeStyles((theme) => {
   };
 });
 
-export const SimpleButton = ({ children }) => {
+export const SimpleButton = ({ children, onClick }) => {
   const classes = useStyle();
   return (
     <>
-      <Button variant="contained" color="primary" className={classes.Button}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={onClick}
+        className={classes.Button}
+      >
         {children}
       </Button>
     </>

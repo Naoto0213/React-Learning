@@ -2,6 +2,7 @@
   text-align: center;
   background: #444;
   min-height: 100vh;
+  padding-top: 48px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
