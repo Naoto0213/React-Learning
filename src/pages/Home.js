@@ -12,7 +12,6 @@ const Home = () => {
   return (
     <>
       <SimpleButton>Home</SimpleButton>
-      <h1>{uid}</h1>
       <h2>{username}</h2>
     </>
   );
