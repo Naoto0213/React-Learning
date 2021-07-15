@@ -7,3 +7,8 @@ export const getUserName = createSelector(
   [usersSelector],
   (state) => state.username
 );
+
+export const getHtmlUrl = createSelector(
+  [usersSelector],
+  (state) => state.html_url
+);

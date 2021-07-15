@@ -6,6 +6,7 @@ export const signInAction = (userState) => {
       isSignedIn: true,
       uid: userState.uid,
       username: userState.username,
+      html_url: userState.html_url,
     },
   };
 };
@@ -18,6 +19,7 @@ export const signOutAction = () => {
       isSignedIn: false,
       uid: "",
       username: "",
+      html_url: "",
     },
   };
 };

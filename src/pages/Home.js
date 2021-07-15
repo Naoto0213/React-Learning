@@ -1,18 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { SimpleButton } from "../components/SimpleButton";
-import { getUserId, getUserName } from "../redux/users/selectors";
+import { getHtmlUrl, getUserId, getUserName } from "../redux/users/selectors";
 
 const Home = () => {
   const selector = useSelector((state) => state);
   const uid = getUserId(selector);
   const username = getUserName(selector);
-
-  console.log(selector.users);
+  const html_url = getHtmlUrl(selector);
   return (
     <>
       <SimpleButton>Home</SimpleButton>
-      <h2>{username}</h2>
+      <p>{uid}</p>
+      <p>{username}</p>
+      <p>{html_url}</p>
     </>
   );
 };

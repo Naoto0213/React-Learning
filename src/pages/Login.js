@@ -5,6 +5,7 @@ import { SimpleButton } from "../components/SimpleButton";
 import { makeStyles } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { signInAction } from "../redux/users/actions";
+import { signIn } from "../redux/users/operation";
 
 const useStyles = makeStyles({
   title: {
@@ -19,8 +20,7 @@ const Login = () => {
   const selector = useSelector((state) => state);
 
   const onClickDispatchPush = () => {
-    dispatch(signInAction({ uid: "01", username: "naoto" }));
-    dispatch(push("/"));
+    dispatch(signIn());
   };
 
   console.log(selector.router);
